@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=STIX+Two+Text:ital,wght@1,500&display=swap');
+
+
+
+.navbar{
+    padding: 2rem;
+    color: white;
+    margin: 0;
+    background-color: #1261A0;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.list-item{
+    padding: 1rem
+}
+.list-item:hover{
+    cursor: pointer;
+}
