@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 1rem;
+    margin: 2rem;
+    list-style-type: none;
 }
 
 .transaction-list{
@@ -17,8 +18,4 @@
     justify-content: center;
     text-align: center;
     list-style-type: none;
-}
-
-.transaction-item{
-    margin: 0.5rem;
 }

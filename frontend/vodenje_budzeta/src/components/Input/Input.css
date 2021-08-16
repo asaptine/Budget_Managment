@@ -59,6 +59,25 @@
 .dropdown-content a{
     display: block;
 }
+
+.addButton {
+    padding: 5px;
+    background-color: var(--mint);
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    outline: none;
+}
+
+.addButton:hover {
+    background-color: var(--gray);
+    color:white
+}
+
+.dropdown select {
+    width: 158px;
+}
+
 .dropdown-content a:hover {background-color: #ddd;cursor: pointer;}
 
 .dropdown:hover .dropdown-content {display: block;cursor: pointer;}

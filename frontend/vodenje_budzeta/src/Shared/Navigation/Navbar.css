@@ -1,0 +1,30 @@
+
+.navbar{
+    padding: 2rem;
+    color: white;
+    margin: 0;
+    background-color: var(--sailor-blue);
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+}
+
+
+.navbar-list a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.navbar-list a:last-of-type{
+    margin-left: auto;
+}
+
+.navbar-list a:hover{
+    color: var(--lime-punch);
+    cursor: pointer;
+}

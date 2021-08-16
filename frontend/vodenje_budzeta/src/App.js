@@ -1,43 +1,26 @@
-import Input from "./components/Input/Input";
+import React, {useState} from "react";
+import { BrowserRouter as Router, Redirect, Route, Switch,  } from "react-router-dom";
+
+import Statistics from './components/Statistics/Statistics';
+import Navbar from "./Shared/Navigation/Navbar";
+import Transactions from './components/Transactions/Transactions'
+
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import React, { useState } from "react";
-import TransactionList from "./components/TransactionList/TransactionList";
-
 function App() {
-  const [arrayOfTransactions, setTransactions] = useState([
-    {
-      id: 1,
-      iznos: 1000,
-      date: "11/02/2021",
-      sort: "Odjeća",
-      name: "Valentin",
-      currency: "EUR",
-      description: "Gucci jacket",
-    },
-    {
-      id: 2,
-      iznos: 1500,
-      date: "11/02/2021",
-      sort: "Odjeća",
-      name: "Marko",
-      currency: "HRK",
-      description: "Majce",
-    },
-  ]);
-
-  const addNewTransactionHandler = (newTransaction) => {
-    setTransactions((prevTransactions) => {
-      return prevTransactions.concat(newTransaction);
-    });
-  };
-
+ 
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Input onAddTransaction={addNewTransactionHandler} />
-      <TransactionList transaction={arrayOfTransactions} />
-    </div>
+      <Switch>
+      <Route path="/" exact>
+        <Transactions ></Transactions>
+      </Route>
+      <Route path="/statistics" exact>
+        <Statistics></Statistics>
+      </Route>
+      <Redirect to="/"></Redirect>
+      </Switch>
+    </Router>
   );
 }
 

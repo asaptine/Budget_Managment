@@ -1,0 +1,44 @@
+.transaction-item{
+    background-color: var(--sailor-blue);
+    margin: 1rem auto ;
+    width: 500px;
+    padding: 30px;
+    box-shadow: var(--mint) 0px 5px 15px;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+}
+
+.transaction-item__info h3 {
+    text-align: center;
+    color:white;
+}
+
+.transaction-item__amount h2{
+    -webkit-border-radius:15%;
+    color: var(--lime-punch);
+    text-align: center;
+    padding: 10px;
+    margin: auto 0;
+    width: fit-content;
+    align-items: right;
+}
+
+.transaction-item__info div{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.transaction-item__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.transaction-item__info p {
+    padding: 30px;
+    margin:10px;
+    color: white;
+
+}

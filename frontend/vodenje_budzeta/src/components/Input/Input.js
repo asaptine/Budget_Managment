@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./Input.css";
 
 const Input = (props) => {
-  const [enteredAmount, setAmount] = useState("");
+  
+  const [enteredAmount, setAmount] = useState('');
 
   const newTransactionChange = (event) => {
     setAmount(event.target.value);
@@ -18,6 +19,8 @@ const Input = (props) => {
 
     props.onAddTransaction(newTransaction);
   };
+  // napravi input list i input item, 
+  //pomocu input lista primi objekt sa props a onda kasnije predajem key po key na input item
 
   return (
     <div className="user-input">
@@ -58,25 +61,24 @@ const Input = (props) => {
               <div className="input-group-prepend">
                 <div className="dropdown">
                 <span className="input-group-text" id="basic-addon1">
-                 Izaberite
-                <div className="dropdown-content">
-                  <a>Odjeća</a>
-                  <a>Hrana</a>
-                  <a>Kozmetika</a>
-                  <a>Zabava</a>
-                  <a>Djeca</a>
-                  <a>Plaća</a>
-                  <a>Ostalo</a>
-                </div>
+                 Vrsta transakcije
+                <select className="form-control">
+                <option  value="Kozmetika">Odjeća</option>
+                  <option value="Kozmetika">Kozmetika</option>
+                  <option value="Zabava">Zabava</option>
+                  <option value="Djeca">Djeca</option>
+                  <option value="Plaća">Plaća</option>
+                  <option value="Ostalo">Ostalo</option>
+                </select>
                 </span>
                 
                 </div>
               </div>
-              <input
-                type="text"
+              {/* <input
+                type="s"
                 className="form-control"
                 placeholder="Vrsta transakcije"
-              ></input>
+              ></input> */}
             </div>
           </div>
 

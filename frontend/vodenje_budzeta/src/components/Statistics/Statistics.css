@@ -1,0 +1,17 @@
+table {
+    margin: 3rem auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  td, th {
+    border: 1px solid var(--gray);
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--sailor-blue);
+    color:white
+  }
